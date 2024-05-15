@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    11111
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>主頁</title>
+    <style>
+        /* 重置默認樣式 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* 導航欄樣式 */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 100;
+            padding: 0;
+            height: 60px;
+            background-color: rgba(22, 115, 228, 0.674);
+            font-family: "Comic Sans MS", cursive;
+            font-size: 25px; /* 調整字體大小為25像素 */
+            color: #fff;
+            font-weight: bold; /* 將字體加粗 */
+            line-height: 60px;
+        }
+
+        .navbar ul {
+            list-style-type: none;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 0;
+        }
+
+        .navbar li {
+            position: relative;
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: #fff;
+        }
+
+        /* 下拉選單樣式 */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #bcbdc0;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: #493843;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #fff;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        /* 側邊欄樣式 */
+        .sidebar {
+            background-color: rgba(22, 115, 228, 0.674);
+            color: #fff;
+            position: fixed;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            overflow-y: auto;
+            font-family: "Comic Sans MS", cursive;
+            font-size: 25px;
+            padding: 10px;
+            font-weight: bold;
+            line-height: 60px;
+            list-style-type: none;
+        }
+
+        .sidebar a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        /* 隨機圖片樣式 */
+        .randomImage {
+            text-align: center;
+            margin: 150px auto 0;
+        }
+
+        /* 其他樣式保持不變 */
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .left {
+            margin-top: 50px;
+            margin-left: 50px;
+            margin-right: 20px;
+            margin-bottom: 50px;
+        }
+
+        .create-adata {
+            margin-top: 100px;
+            margin-left: 270px;
+        }
+
+        .blue-box {
+            width: 200px;
+            height: 100px;
+            background-color: rgb(180, 228, 235);
+            color: white;
+            text-align: center;
+            line-height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <div class="navbar">
+            <ul>
+                <li><a href="#">00 Preprocessing</a></li>
+                <li class="dropdown">
+                    <a href="#">01 Clustering</a>
+                    <div class="dropdown-content"></div>
+                </li>
+                <li><a href="#">02 Phenotyping</a></li>
+                <li><a href="#">03 Cell Interaction</a></li>
+                <li><a href="#">04 Neighborhood</a></li>
+            </ul>
+        </div>
+
+        <div class="create-adata blue-box">
+            <h1>Create Adata</h1>
+            <h3>Please upload your files:</h3>
+        </div>
+
+        <div class="sidebar">
+            <li><a href="#">Create Adata</a></li> 
+            <li><a href="#">Quality Control</a></li>    
+            <li><a href="#">Normalization</a></li>
+            <li><a href="#">Merge Data</a></li>
+        </div>
+
+        <div class="randomImage"></div> <!-- Placeholder for random image -->
+
+        <div class="container">
+            <div class="left"></div> <!-- Placeholder for latest news -->
+        </div>
+
+        <div class="container">
+            <div class="right">
+                <h1><span style="background-color: #ffc;">在地小農</span></h1>
+            </div> <!-- Placeholder for local farmers -->
+        </div>
+    </div>
+</body>
+</html>
